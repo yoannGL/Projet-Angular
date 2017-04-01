@@ -1,0 +1,49 @@
+<div class="container">
+  <header class="jumbotron hero-spacer">
+            <h1>Bienvenue sur Movie App!</h1>
+            <p>Movie App est un site répertoriant une liste de films en tout genres. Vous pouvez, si vous le désirez, ajouter des films à cette liste.</p>
+    </header>   
+        <hr>
+
+<!-- barre de recherche permettant de filtrer les films par noms-->
+  <div class="row">
+    <div class="col-md-12 ">
+   <p>
+    Recherche:
+      <input ng-model="$ctrl.query" />
+    </p>
+
+    </div>
+ </div>
+<!-- /. barre de recherche -->
+
+ <div class="row" >
+            <div class="col-md-12">
+                <h3>Liste des films</h3>
+            </div>   
+ </div>
+</br>
+
+<!--  Liste des films -->
+<div class="row">
+  <!-- permet d'afficher les datas de mon tableau de films du fichier app/JavaScript/listeFilm.js-->
+    <div class="col-md-6" ng-repeat="film in mesFilms | filter:$ctrl.query">
+
+      <ul class="phones">
+        <li class="thumbnail">
+          <a href="#/list/{{film.id}}" class="thumb">
+            <img ng-src="{{film.imageUrl}}" alt="{{film.title}}" />
+          </a>
+          <a href="#/list/{{film.id}}">{{film.title}}</a>
+          <p>genre : {{film.genre}}</p>
+          <p>
+            <a href="#/list/{{film.id}}" class="btn btn-default info">Plus d'infos</a>
+          </p>
+
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+

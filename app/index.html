@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta Charest="UTF-8">
+<title>Projet AngularJS Yoann Rumeau</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"> 
+<script src="JavaScript/config.js"></script>
+
+
+</head>
+<body ng-app="myApp" >
+
+<!-- HEADER -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/list">Movies App</a>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#/add">Ajouter un film</a>
+                    </li>
+                     <li>
+                        <a href="#/edit">Editer un film</a>
+                    </li>  
+                </ul>
+               </div>
+            </div>       
+</nav>
+
+<!-- NG-View est une directive angular qui permet d'afficher nos différentes vues -->
+
+<div ng-view></div>
+
+<!-- FOOTER -->
+
+<div class="container">
+
+          <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <p>Copyright &copy; Movies App ! Yoann Rumeau 2017</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <p style="text-align:center;">ISEP</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <p>Projet de rattrape pour le module Frameworks et langages Web</p>
+                </div>
+            </div>
+        </footer>
+
+ </div>
+
+</body>
+</html>
